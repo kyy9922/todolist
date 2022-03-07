@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>canvas 확인하기</h1>
+    <canvas id="myCanvas" width="500" height="500" style="border:2px solid #000;"></canvas>
+
+    
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+
+        //그라디언트 (선형)
+        let grd = context.createLinearGradient(0,200,200,200);
+        grd.addColorStop(0,'#0000ff');
+        grd.addColorStop(1,'#fff');
+
+        let grd2 = context.createLinearGradient(0,200,200,200);
+        grd2.addColorStop(0,'orange');
+        grd2.addColorStop(1,'white');
+
+        //색을 입히고 그려주기
+        context.fillStyle = grd;
+        context.fillRect(0,0,200,50);
+
+        //사각형위에 글씨쓰기
+        context.font = "30px Arial"
+        context.fillStyle = '#fff';
+        context.fillText("CANVAS",20,35);
+
+        context.fillStyle = grd2;
+        context.fillText("CANVAS",20,90);
+
+        
+
+        
+
+
+        
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

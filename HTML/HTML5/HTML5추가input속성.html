@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML5에서 추가된 input 속성</h1>
+    < action="서버측 파일.html" autocomplete="on" id="form1">
+        <input type="text" name="name" value="미리적힌값"> 태그 뒤에 적힌 값<br>
+        <input type="text" name="auto" autofocus><br>
+        
+        <input list="food" name="food"> list속성중 option입니다
+            <datalist id="food">
+                <option value="한식"></option>
+                <option value="중식"></option>
+                <option value="일식"></option>
+                <option value="양식"></option>
+            </datalist> <br>
+        
+        <input type="file" value="파일" multiple> <br>
+        multiple을 사용하면 파일을 여러개 받아올 수 있다. <br>
+        <input type="text" parttern="[a-z]"> 패턴에 들어가는 문자의 반복/규칙<br>
+
+        <input type="text" name="place" placeholder="힌트"> <br>
+        placeholder는 value 값이 아닌 사용자에게만 보이는 텍스트 <br>
+
+        <input type="text" required> <br>
+        빈 값일 경우 전달되지 않는다 <br>
+
+        <input type="number" step="2"> 2칸씩 건너뜁니다.<br>
+
+
+        
+        <!-- 이미지 버튼입니다. -->
+        <input type="image" src="../HTML기초/img/naver.png" alt="전송"><br>
+        image소성을 이용하여 이미지버튼을 만들 수 있다.<br>
+        alt는 이미지가 안보였을 때 텍스트 표시<br>
+        scr로 파일 위치를 알려줄 때 <strong></strong>을 사용시 자신의 상위폴더 이동<br><br>
+
+        <input type="submit" value="버튼" formaction="다른 서버측 파일.html" formenctype="multipart/form-data"><br>
+        submit타입은 form~ 속성을 이용하여<br>
+        인코딩을 바꾸거나 서버측 파일을 바꿀 수 있다.<br>
+        차 후 서버할때 다시 확인
+    </form>
+    
+    <input type="text" name="form" form="form1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

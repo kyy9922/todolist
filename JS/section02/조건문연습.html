@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num = 4
+        if (num %2 == 0){
+            document.write(num + "은 짝수 입니다<br />")
+        }
+        else {
+            document.write(num + "은 홀수 입니다")
+        }
+
+        // 음수, 양수, 0판별
+
+        let num2 = -30;
+
+        if(num2 > 0) {
+            document.write("<p>양수 입니다</p>")
+        }
+        else if (num2 < 0){
+            document.write("<p>음수 입니다</p>")
+        }
+        else if (num2==0){
+            document.write("<p>0입니다</p>")
+        }
+
+        // 금액대비 할인율이 다른
+        // 10000원 이상 -5% / 50000원이상 10% / 100000원 이상 20%
+
+        let pay = 2000000;
+
+        if (pay >= 100000) {
+            pay = pay - pay*0.2;
+            document.write(pay);
+        }
+        else if (pay >= 50000){
+            pay -= pay*0.1;
+            document.write(pay);
+        }
+        else if (pay >= 10000){
+            pay -= pay*0.05;
+            document.write(pay)
+        }
+
+
+    </script>
+</body>
+</html>

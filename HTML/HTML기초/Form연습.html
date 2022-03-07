@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        table {border:2px solid #000;padding:0;}
+
+    </style>
+</head>
+<body>
+    <h2>로그인 페이지 입니다</h2>
+    <form><!-- 데이터 값을 다른 웹페이지로 보내기 위해 사용 -->
+        <table><!--  입력폼을 테이블로 정렬해서 보이기 위함 -->
+            <tr>
+                <td>사용자 : </td>
+                <td><input type="text" name="id"></td>
+                <td rowspan="2"><input type="submit" value="전송"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 : </td>
+                <td><input type="password" name="paasword"></td>                    
+            </tr>
+        </table>        
+    </form>
+    <a href="#">비밀번호를 잊어버렸나요?</a>
+
+    <h2>설문조사</h2>
+    <p>성별을 체크해주세요</p>
+    <input type="radio" name="gender" value="남">남
+    <input type="radio" name="gender" value="여">여
+
+    <p>음식을 선태갷주세요</p>
+    <input type="checkbox" name="food" value="한식">한식<br>
+    <input type="checkbox" name="food" value="일식">일식<br>
+    <input type="checkbox" name="food" value="중식">중식<br>
+    <input type="checkbox" name="food" value="양식">양식
+
+    <p>기타의견을 남겨주세요</p>
+    <textarea name="text" rows="10" cols="30"></textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

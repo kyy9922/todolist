@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/선택자.css">
+</head>
+<body>
+    
+    <h1>결합선택자</h1>
+
+    <h3>자손선택자</h3>
+    <div class="partents">
+        <p>자식요소</p>
+        <div>
+            <p>자식요소</p>
+        </div>
+    </div>
+    <p>부모요소가 없습니다</p>
+
+
+    <h3>자식선택자</h3>
+    <div class="partents_children">
+        <p>자식요소</p>
+        <div>
+            <p>자식요소</p>
+        </div>
+    </div>
+    <p>부모요소가 없습니다</p>
+
+    <h3>일반 동위 연산자 '~'</h3>
+    <p>바깥의 p태그입니다</p>
+    <div class="sibling">
+        <p>sibling 안쪽의 p태그입니다</p>
+    </div>
+    <p>sibling된 p태그입니다</p>
+    <p>같은 부모아래 있는 태그중 뒤에 나오는 모든 태그에 효과</p>
+
+    <h2>sibling 확인</h2>
+    
+    <h3>인접동위선택자</h3>
+    <div name="adjacent">
+        <p>adjacent의 자식</p>
+    </div>
+    <p>인접한 p태그</p>
+    <p>인접하지 않는 p태그</p>
+
+    <div>
+        <h1>의사클래스</h1>
+        <h3>동적의사클래스</h3>
+        <div class="hover">
+            마우스를 올리면 배경이 나타남
+        </div>
+        <input type="text" class="focus" valute="미리적힌 값">
+
+        <h3>상태 의사 클래스</h3>
+        <p>input 태그와 함께사용</p>
+        <div class="input">
+            <input type="checkbox" name="num"><span>HTML</span>
+            <input type="checkbox" name="num"><span>CSS</span>
+            <input type="checkbox" name="num" disabled><span>JS</span>
+        </div>
+        html은 태그로 꾸며주는 문서입니다
+
+        <h3>구조의사 클래스</h3>
+        <div class="first_child">
+            <p class="first">첫번째 자식태그</p>
+            <p class="first">첫번째 자식태그</p>
+            <p class="first">첫번째 자식태그</p>
+            <p class="first">first_child는 부모태그중에 첫번째로 가지는 태그 또는 클래스가 
+            앞의이름일때 효과를 준다 p:first_child</p>
+        </div>
+        <section>
+            <p>첫번째 자식태그</p>
+        </section>
+
+        <h3>first-of-type</h3>
+
+        <div>
+            <p class="type">
+                자식태그로 들어간 최초의 값에 효과를 준다.
+            </p>
+        </div>
+        
+        <h3>의사 요소</h3>
+        <div class="pseudo">
+            <p>텍스트 첫글자를 선택함</p>
+        </div>
+        <div class="pseudo_line">
+            <p>텍스트 첫글자를 선택함<br>줄을 바꾸었습니다</p>
+        </div>
+
+        <div class="before_after">
+            <p>첫문단</p>
+            <p>둘째문단</p>
+        </div>
+
+        <div class="selection">
+            <p>드래그 했을 때 값 변화</p>
+        </div>
+
+        <h3>속성 선택자</h3>
+        <div class="atrribute">
+            <div title="div tit">div타이틀</div>
+            <p title="p tit">p타이틀</p>
+            <h1 title="h1 tit">h1타이틀</h1>
+        </div>
+
+        <h3>기타 의사 클래스</h3>
+        <div class="not">
+            <p>p태그</p>
+            <h1>h1태그</h1>
+            <p title="n">title이 없는 p태그</p>
+        </div>
+
+        <div class="wrap">
+            <div class="box_wrap">
+                <p>색을 누르면 사전으로 넘어갑니다</p>
+                <ul>
+                    <li><a href="#">빨강</a></li>
+                    <li><a href="#">파랑</a></li>
+                    <li><a href="#">노랑</a></li>                
+                </ul>
+            </div>
+            <ul class="tag">
+                <li>#네이버</li>
+                <li>#사전</li>
+                <li>#색</li>
+            </ul>
+        </div>
+
+        <h1>의사 클래스 활용하기</h1>
+        <h3>공지</h3>
+        <ul class="new">
+            <li>새로운 알림입니다.</li>
+            <li>새로운 알림입니다.</li>
+            <li>새로운 알림입니다.</li>
+            <li>새로운 알림입니다.</li>
+        </ul>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

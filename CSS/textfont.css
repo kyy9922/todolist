@@ -1,0 +1,38 @@
+
+
+.text{
+    direction:ltr;
+    letter-spacing: 10px;
+    word-spacing:10px;
+    text-align: center;
+    text-decoration: overline underline dashed;
+    text-shadow:2px 1px lightgray;
+}
+
+.text_p{
+    text-indent: 10px;
+    line-height: 40px;
+}
+
+.font_h3 {
+    font-family: fantasy,"궁서";
+}
+
+.font {
+    font-family: 'Jua', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+.web_font{
+    font-family: 'Gugi', cursive;
+    font-variant: small-caps;
+    font-size:40px;
+}
+
+
+
+
+
+
+
+

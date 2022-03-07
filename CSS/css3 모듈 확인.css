@@ -1,0 +1,32 @@
+.color {
+    width:100px;height:200px;
+    background:red;
+    background:-webkit-linear-gradient(red, yellow) no-repeat;
+    background:linear-gradient(red, yellow) no-repeat;
+}
+
+.color_css3 {
+    width:200px;
+    height:100px;
+    background: rgba(255,255,255);
+}
+
+.color_gradient_deg {
+    width:200px;height:100px;
+    background:linear-gradient(180deg, green, yellow);
+}
+
+.color_gradient_circle {
+    width:200px;height:100px;
+    background: radial-gradient(closest-corner, red, black);
+}
+.background_image {
+    width:200px;
+    height:100px;
+    background-image: url(https://cdn.pixabay.com/photo/2021/12/19/03/51/tree-6880117_1280.jpg);
+    background-size: 200px 100px;
+    padding:100px;
+    border:10px solid #black;
+    background-origin:content-box;
+    
+}

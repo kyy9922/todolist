@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {list-style: none;;}
+    </style>
+</head>
+
+<body>
+    <form id="todo_form" action="">
+        <input id="text_value" type="text" placeholder="내용입력" required>
+        <input id="todo_button" type="button" value="+">
+    </form>
+    <ul class="todo" id="todo_list"></ul>
+
+
+    <script>
+        const todoInput = document.querySelector('#todo_form input')
+        const textValue = document.querySelector('#text_value')
+        const todoButton = document.querySelector('#todo_button')
+        const todoList = document.querySelector('#todo_list')
+
+        todoButton.addEventListener('click', todoFormButton);
+
+        function todoFormButton() {
+            const li = document.createElement('li');
+
+            const checkbox = document.createElement('input')
+            checkbox.type = "checkbox";
+
+            checkbox.addEventListener('click', todoCheck);
+
+            const text = document.createTextNode(todoInput.value);
+
+            const button = document.createElement('button');
+            button.textContent = 'X';
+            button.addEventListener("click", todoDelete);
+
+            li.appendChild(checkbox);
+            li.appendChild(text);
+            li.appendChild(button);
+
+            todoList.appendChild(li);
+
+            todoInput.value = "";
+        }
+
+        function todoCheck(event) {
+            // console.log(event.target)
+            const checkbox = event.target;
+            if (checkbox.checked) {               
+                checkbox.parentNode.style.color = "lightgray";
+            }
+            else {                
+                checkbox.parentNode.style.color = "black";
+            }
+        }
+
+        function todoDelete(event) {
+            event.target.parentNode.remove();
+        }
+
+    </script>
+
+</body>
+
+</html>
