@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="show_button">보이기</button>
+    <button id="hide_button">숨기기</button><br /><br />    
+    <p id="text">글자가 보이고 숨겨짐</p>
+
+    <button id="toggle">토글</button><br />
+
+            
+    <div id="txt">
+        <p>이요소는 div안의 p 요소</p>
+    </div>
+
+    <button id="upbtn">버튼위 마우스 올리고 벗어나기</button> <br /><br />
+    <div id="square" style="width:100px;height:100px;background:yellow;border:5px solid orange">
+        <button id="stopbutton">X</button>
+    </div>
+
+    <button id="slide">슬라이드 나타나기</button>
+    <div id="square2" style="position:fixed;top:10px;right:10px;width:100px;height:100px;background:yellow;border:5px solid orange; ">
+        <div id="div_cancle">X</div>
+    </div>
+    
+
+
+    <script>
+        $('#show_button').on('click', function(){
+            $('#text').show('');
+        });
+        $('#hide_button').on('click',function(){
+            $('#text').hide('');
+        });
+
+        $('#toggle').on('click', function(){
+            $('#txt').toggle('');
+        });
+
+        $('#txt').hide('');
+
+        $('#upbtn').on({
+            mouseenter : function(){
+                $('#square').fadeIn('');
+            },
+            mouseleave : function(){
+                $('#square').delay(2000).fadeOut('');
+                $('#stopbutton').on('click', function(){
+                $('#square').stop('');
+            });
+            }
+        });
+
+        $('#square').hide('');
+
+        $('#slide').on('click', function(){
+            $('#square2').slideToggle('');
+        });
+
+        
+
+
+        $('#div_cancle').on('click', function(){
+            $('#square2').slideUp('');
+        });
+
+
+    </script>
+</body>
+</html>

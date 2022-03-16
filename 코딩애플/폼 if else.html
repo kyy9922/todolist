@@ -16,7 +16,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="body">
 
     <div class="black-bg">
         <div class="white-bg">
@@ -66,10 +66,23 @@
 
         $('#close').on('click', function () {
             $('.black-bg').removeClass('show');
+        })  
+
+        // document.querySelector('.black-bg').addEventListener('click', function(e){
+        //     if ( e.target == document.querySelector('.black-bg') ) {
+        //         document.querySelector('.black-bg').classList.remove('show');
+        //     }
+        // })
+
+        $('.black-bg').on('click', function(e){
+            
+            if ( $(e.target) == $('.black-bg') ) {
+                $('.black-bg').removeClass('show');
+            }
         })
 
 
-
+        
     </script>
 
 

@@ -20,4 +20,4 @@ function getClockInnerHTML() {
 //처음 한번 출력
 clock.innerHTML = getClock();
 //이후 화살표함수로 값을 넣어줌
-setInterval( ()=> { $('#clock').text(getClock() )}, 1000);
+setInterval( ()=> { $("#clock").text( getClock() )} , 1000);

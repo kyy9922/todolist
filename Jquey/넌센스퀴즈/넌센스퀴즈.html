@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>넌센스 Quiz 맞추기</h1>
+    <p>3문제 - 중복있음</p>
+    <h3><a href="#" id="start">시작</a></h3>
+
+    <h3 id="quiz"></h3>
+
+    <form id="input_form" style="display:none;">
+        <input type="text">
+    </form>
+
+    <p id="score"></p>
+
+    <script>
+        let score = 0;
+        let count = 0;
+        let randomnum = 0;
+        const quizArray = [
+                {quiz:'1+1', answer:'2'},
+                {quiz:'2+2', answer:'4'},
+                {quiz:'3+3', answer:'6'},
+                {quiz:'4+4', answer:'8'},
+                {quiz:'5+5', answer:'10'}
+            ];
+
+            $('#start').on('click', function(e){
+                e.preventDefault();
+                $('#input_form').slideDown().focus();
+                $('#input_form').children().first().focus();
+
+                // 시작버튼을 눌렀을 때 출력되는 문제
+                // $('#quiz').text('15+9');
+                quizStart();
+                
+            });
+
+        // submit이벤트 발생시 input값 비교
+        $('#input_form').on('submit', function(e){
+            e.preventDefault();
+            const answer = quizArray[randomnum].answer;
+            const $user = $('#input_form').children().first().val()
+            count ++;
+            if ($user == answer){
+                score++;
+                $('#score').text(`${score}점입니다`);
+            }
+
+            quizStart();
+            $('#input_form').children().first().val('');
+
+            if(count == 3){
+                $('#input_form').hide();
+                $('#quiz').text('');
+                count = 0;
+                score = 0;                
+            }
+        });
+
+        function quizStart(){
+            randomnum = Math.floor(Math.random()*quizArray.length)
+            $('#quiz').text(quizArray[randomnum].quiz)
+        }
+    </script>
+</body>
+
+</html>
