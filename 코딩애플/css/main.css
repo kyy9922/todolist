@@ -1,6 +1,25 @@
+.grey {
+    background:lightblue;
+    height:2000px;
+    margin-top:500px;
+}
+
+.image {
+    float:right;
+    width:400px;
+    position:sticky;
+    top:100px;
+}
+.text{
+    float:left;
+    width:300px;
+}
+
 :root {
     scroll-behavior :auto;
 }
+
+.form-hide {display:none !important; }
 
 .alert-box {background:blue;padding:20px;border-radius:5px;display:none;color:#fff}
 .yellow-bg{background:yellow}
@@ -78,6 +97,23 @@ ul.list::after {
 
 .your-class {width:100%;}
 .your-class img{width:100%;}
+
+.card-background{
+    height:3000px;
+    margin-top:800px;
+    margin-bottom:1600px;
+}
+.card-box{
+    position:sticky;
+    top:400px;
+    margin-top:200px;
+}
+.card-box img{
+    display:block;
+    margin:auto;
+    max-width:80%;
+}
+
 
 
 
